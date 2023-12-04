@@ -9,11 +9,12 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #eafaf1;
+            color: #333;
         }
 
         header {
-            background-color: #333;
+            background-color: #4caf50;
             color: white;
             padding: 1em;
             text-align: center;
@@ -32,7 +33,7 @@
         }
 
         footer {
-            background-color: #333;
+            background-color: #4caf50;
             color: white;
             text-align: center;
             padding: 1em;
@@ -48,14 +49,20 @@
             border-radius: 4px;
             cursor: pointer;
             color: white;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
         }
 
         .linkedin-btn {
-            background-color: #0077b5;
+            background-color: #00796b;
         }
 
         .whatsapp-btn {
-            background-color: #25d366;
+            background-color: #43a047;
+        }
+
+        button:hover {
+            background-color: #555;
         }
     </style>
 </head>
@@ -78,8 +85,8 @@
     </section>
 
     <footer>
-        <button class="linkedin-btn" onclick="window.location.href='https://www.linkedin.com/company/farmtechnexus/?viewAsMember=true'">LinkedIn</button>
-        <button class="whatsapp-btn" onclick="window.location.href='https://wa.link/onjccs'">WhatsApp</button>
+        <button class="linkedin-btn" onclick="window.location.href='your-linkedin-profile'">LinkedIn</button>
+        <button class="whatsapp-btn" onclick="window.location.href='https://wa.me/your-whatsapp-number'">WhatsApp</button>
         <p>&copy; 2023 FarmTech Nexus. All rights reserved.</p>
     </footer>
 
