@@ -26,3 +26,10 @@ ctaButton.addEventListener('mouseover', () => {
 ctaButton.addEventListener('mouseout', () => {
     ctaButton.style.background = '#5BC0DE';
 });
+
+function scrollToContent() {
+    document.querySelector('#main-content').scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
