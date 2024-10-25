@@ -17,3 +17,12 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Change button background color on hover
+const ctaButton = document.querySelector('.cta-button');
+ctaButton.addEventListener('mouseover', () => {
+    ctaButton.style.background = 'linear-gradient(45deg, #0078D7, #5BC0DE)';
+});
+ctaButton.addEventListener('mouseout', () => {
+    ctaButton.style.background = '#5BC0DE';
+});
