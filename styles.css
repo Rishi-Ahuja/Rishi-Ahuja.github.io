@@ -1,137 +1,134 @@
-/* General styles */
-body {
+/* Global styles */
+body, html {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #000;
+    background: linear-gradient(to bottom, #00c6ff, #0072ff);
     color: #fff;
 }
 
-/* Hero Section */
-#hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to bottom, #0077b6, #00b4d8);
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
     text-align: center;
+    padding: 50px 0;
     position: relative;
 }
 
-.hero-content {
-    max-width: 800px;
-    padding: 20px;
+.title {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
 }
 
-#logo {
-    font-size: 5rem;
-    font-weight: bold;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    background: linear-gradient(to right, #0077b6, #00b4d8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.header::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
 
-#hero p {
-    font-size: 1.5rem;
-    margin: 10px 0;
-}
-
-#get-started-btn {
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    background-color: #00b4d8;
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #00c6ff;
     border: none;
-    border-radius: 25px;
-    color: #000;
+    color: white;
+    text-transform: uppercase;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 20px;
+    z-index: 1;
+    position: relative;
 }
 
-#get-started-btn:hover {
-    background-color: #90e0ef;
+.btn:hover {
+    background-color: #0072ff;
 }
 
-/* Main content */
-#main-content {
-    padding: 50px;
-    background-color: #101010;
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
 }
 
-.features {
+.content .image {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.content .image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.content .text {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.content .text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00c6ff;
+}
+
+.cards {
     display: flex;
     justify-content: space-around;
-    text-align: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
 }
 
-.feature-box {
+.card {
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
-    background-color: #202020;
+    margin: 10px;
     border-radius: 10px;
     width: 23%;
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
 }
 
-.feature-box h2 {
-    color: #00b4d8;
-    margin-bottom: 15px;
+.card:hover {
+    transform: scale(1.05);
 }
 
-.feature-box p {
-    color: #ccc;
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #00c6ff;
 }
 
-/* Why Forge Section */
-.why-forge {
-    padding: 50px;
-    background-color: #181818;
-    text-align: center;
-    margin-top: 40px;
-    border-radius: 10px;
+.card p {
+    font-size: 1rem;
 }
 
-.why-forge h2 {
-    color: #00b4d8;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
 
-.why-forge img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
+    .content .image, .content .text {
+        padding: 0;
+        text-align: center;
+    }
 
-.why-forge ul {
-    list-style-type: disc;
-    text-align: left;
-    margin: 20px auto;
-    max-width: 700px;
-    color: #fff;
-}
+    .cards {
+        flex-direction: column;
+    }
 
-.why-forge li {
-    margin: 10px 0;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #202020;
-    color: #ccc;
-}
-
-footer a {
-    color: #00b4d8;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-footer a:hover {
-    text-decoration: underline;
+    .card {
+        width: 100%;
+    }
 }
