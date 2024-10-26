@@ -27,8 +27,25 @@ ctaButton.addEventListener('mouseout', () => {
     ctaButton.style.background = '#5BC0DE';
 });
 
+// Function for smooth scrolling to content and hiding the landing screen
 function scrollToContent() {
-    document.querySelector('#main-content').scrollIntoView({
+    document.getElementById('landing-screen').style.display = 'none';
+    document.getElementById('header').classList.remove('hidden');
+    window.scrollTo({
+        top: document.getElementById('main-content').offsetTop,
         behavior: 'smooth'
     });
 }
+
+// Event listener for the Get Started button
+document.querySelector('.btn').addEventListener('click', scrollToContent);
+
+// Shrink header on scroll
+window.addEventListener('scroll', () => {
+    const header = document.getElementById('header');
+    if (window.scrollY > 50) {
+        header.classList.add('header-small');
+    } else {
+        header.classList.remove('header-small');
+    }
+});
