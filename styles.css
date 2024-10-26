@@ -27,7 +27,7 @@ body {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 1.2em;
-    background-color: #0072ff;
+    background-color: #5BC0DE;
     border: none;
     border-radius: 5px;
     color: white;
@@ -35,8 +35,9 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #005bb5;
+.header-small {
+    padding: 5px 0;
+    font-size: 0.8em;
 }
 
 .hidden {
@@ -110,6 +111,17 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+}
+
+.feature {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.feature.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 footer {
